@@ -12,6 +12,7 @@
 
 <body>
     <main>
+        <div class="error"></div>
         <header>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -35,37 +36,35 @@
                           Har yangi raqamni vergul bilan ajratib yozing!
                         </div>
                       </div>
-                    <h4 id="error" class="text-danger"></h4>
                     <div class="mb-3">
                         <label for="bn"><strong class="text-muted">Бн</strong></label>
-                        <input placeholder="Банни" id="bn" type="text" class="form-control">
+                        <input placeholder="1 шт 170" id="bn" type="text" class="form-control">
                         <p class="text-muted" id="banni">summa: <b>0</b> so'm</p>
                     </div>
                     <div class="mb-3">
                         <label for="cr"><strong class="text-muted">Ср</strong></label>
-                        <input placeholder="средний" id="cr" type="text" class="form-control">
+                        <input placeholder="1 шт 120" id="cr" type="text" class="form-control">
                         <p class="text-muted" id="sred">summa: <b>0</b> so'm</p>
                     </div>
                     <div class="mb-3">
                         <label for="m"><strong class="text-muted">М</strong></label>
-                        <input placeholder="маленький" id="m" type="text" class="form-control">
+                        <input placeholder="1 шт 96" id="m" type="text" class="form-control">
                         <p class="text-muted" id="mmm">summa: <b>0</b> so'm</p>
                     </div>
                     <div class="mb-3">
                         <label for="40/70"><strong class="text-muted">40/70</strong></label>
-                        <input id="40/70" type="text" class="form-control">
+                        <input id="40/70" type="text" placeholder="1 шт 106" class="form-control">
                         <p class="text-muted" id="fourty">summa: <b>0</b> so'm</p>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
-                        <button type="button" id="calculate" class="btn btn-primary btn-sm">Hisoblash</button>
-                        <button type="reset" class="btn btn-secondary btn-sm">
+                        <button type="button" id="calculate" class="btn btn-primary">Hisoblash</button>
+                        <button type="reset" class="btn btn-secondary">
                             <i class='bx bx-rotate-left'></i>
                             Tozalash
                         </button>
                     </div>
-                    <hr>
                     <div class="jumbotron">
-                        <h5 id="all" class="text-success text-center"></h5>
+                        <h5 id="all" class="text-center">Jami: 0 so'm.</h5>
                     </div>
                 </form>
             </div>

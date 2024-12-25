@@ -11,7 +11,7 @@ const mSum = document.querySelector("#mmm b");
 const fourtySum = document.querySelector("#fourty b");
 
 const calcBtn = document.querySelector("#calculate");
-const errorText = document.querySelector("#error");
+const errorPlace = document.querySelector(".error");
 
 let banniTotal = 0, crTotal = 0, mTotal = 0, fourtyTotal = 0;
 
@@ -23,10 +23,13 @@ banniInput.addEventListener("input", function (e) {
     sum = sum * 170;
     if(sum || sum == 0) {
         banniSum.innerText = sum;
-        errorText.innerHTML = "";
         banniTotal = sum;
+        errorPlace.innerHTML = "";
     } else {
-        errorText.innerHTML = "Iltimos to'g'ri kiriting !";
+        errorPlace.innerHTML = `<div class="fade show alert alert-danger fixed-top d-flex justify-content-between" role="alert">
+            <small>Sonlar orasi , bilan ajratilmadi.</small>
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+          </div>`
     }
 })
 
@@ -38,10 +41,13 @@ crInput.addEventListener("input", function (e) {
     sum = sum * 120;
     if(sum || sum == 0) {
         crSum.innerText = sum;
-        errorText.innerHTML = "";
+        errorPlace.innerHTML = "";
         crTotal = sum;
     } else {
-        errorText.innerHTML = "Iltimos to'g'ri kiriting !";
+        errorPlace.innerHTML = `<div class="fade show alert alert-danger fixed-top d-flex justify-content-between" role="alert">
+            <small>Sonlar orasi , bilan ajratilmadi.</small>
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+          </div>`
     }
 })
 
@@ -53,10 +59,13 @@ mInput.addEventListener("input", function (e) {
     sum = sum * 96;
     if(sum || sum == 0) {
         mSum.innerText = sum;
-        errorText.innerHTML = "";
         mTotal = sum;
+        errorPlace.innerHTML = "";
     } else {
-        errorText.innerHTML = "Iltimos to'g'ri kiriting !";
+        errorPlace.innerHTML = `<div class="fade show alert alert-danger fixed-top d-flex justify-content-between" role="alert">
+            <small>Sonlar orasi , bilan ajratilmadi.</small>
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+          </div>`
     }
 })
 
@@ -68,19 +77,26 @@ fourtyInput.addEventListener("input", function (e) {
     sum = sum * 106;
     if(sum || sum == 0) {
         fourtySum.innerText = sum;
-        errorText.innerHTML = "";
         fourtyTotal = sum;
+        errorPlace.innerHTML = "";
     } else {
-        errorText.innerHTML = "Iltimos to'g'ri kiriting !";
+        errorPlace.innerHTML = `<div class="fade show alert alert-danger fixed-top d-flex justify-content-between" role="alert">
+            <small>Sonlar orasi , bilan ajratilmadi.</small>
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+          </div>`
     }
 })
 
 calcBtn.addEventListener("click", function() {
-    document.getElementById('all').innerText = "Jami: " + (banniTotal + crTotal + mTotal + fourtyTotal) + " so'm !";
+    document.getElementById('all').innerText = "Jami: " + (banniTotal + crTotal + mTotal + fourtyTotal) + " so'm.";
 })
 
 document.querySelector("button[type=reset]").addEventListener('click', () => {
-    document.getElementById("all").innerText = "";
+    banniTotal = 0;
+    crTotal = 0;
+    mTotal = 0;
+    fourtyTotal = 0;
+    document.getElementById("all").innerText = "Jami: 0 so'm.";
     banniSum.innerText = 0;
     crSum.innerText = 0;
     mSum.innerText = 0;

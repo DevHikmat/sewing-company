@@ -3,6 +3,9 @@
 * {
     font-family: "Inter", serif !important;
 }
+p{
+    margin-bottom: 0 !important;
+}
 
 header{
     background-color: #1d1b32;
@@ -15,4 +18,15 @@ header{
 label strong{
     font-size: 15px;
     font-weight: 500;
+}
+#all{
+    width: 100%;
+    background-color: #1d1b32;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 16px;
 }
